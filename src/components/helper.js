@@ -1,3 +1,5 @@
+import React from "react";
+
 const rgbValue = () => {
   return Math.floor(Math.random() * 256);
 };
@@ -15,3 +17,4 @@ const generateColors = (num) => {
 };
 
 export { rgbValue, generateColors };
+//

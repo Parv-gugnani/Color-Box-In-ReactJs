@@ -1,27 +1,26 @@
-import React from "react";
-import { Component } from "react";
+import React, { Component } from "react";
 import "./BoxContainer.css";
 import Box from "./Box";
-import { rgbValue, generateColor } from "./helper";
+import { rgbValue, generateColors } from "./helper";
 
 class BoxContainer extends Component {
   static defaultProps = { num: 18 };
   constructor(props) {
     super(props);
     this.state = {
-      colors: generateColor(this.props.num),
+      colors: generateColors(this.props.num),
     };
-    this.changeColors = this.changeColors.bind(this);
+    this.changeColor = this.changeColor.bind(this);
   }
 
-  chnageColor(c) {
+  changeColor(c) {
     let newColor;
     do {
-      newColor = ` rgba(
-            ${rgbValue()},
-            ${rgbValue()},
-            ${rgbValue()}
-        )`;
+      newColor = `rgba(
+        ${rgbValue()},
+        ${rgbValue()},
+        ${rgbValue()}
+      )`;
     } while (newColor === c);
 
     this.setState((st) => ({
@@ -31,6 +30,7 @@ class BoxContainer extends Component {
       }),
     }));
   }
+
   render() {
     return (
       <div className="BoxContainer">
