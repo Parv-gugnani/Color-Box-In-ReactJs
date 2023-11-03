@@ -1,5 +1,5 @@
 import React from "react";
-import BoxContainer from "./BoxContainer";
+import BoxContainer from "./components/BoxContainer";
 
 function App() {
   return (
