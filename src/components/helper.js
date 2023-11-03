@@ -1,17 +1,17 @@
 const rgbValue = () => {
-  return Math.floor(Math.random() * 255);
+  return Math.floor(Math.random() * 256);
 };
 
-const generateColor = (num) => {
+const generateColors = (num) => {
   let colors = [];
 
-  for (let i = 0; i < num; i) {
+  for (let i = 0; i < num; i++) {
     const red = rgbValue();
-    const blue = rgbValue();
     const green = rgbValue();
-    colors.push(`rgb(${red}, ${blue},${green})`);
+    const blue = rgbValue();
+    colors.push(`rgb(${red},${green},${blue})`);
   }
   return colors;
 };
 
-export { rgbValue, generateColor };
+export { rgbValue, generateColors };

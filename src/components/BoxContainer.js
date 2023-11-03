@@ -2,7 +2,7 @@ import React from "react";
 import { Component } from "react";
 import "./BoxContainer.css";
 import Box from "./Box";
-import { rgbValue, generateColors } from "./helper";
+import { rgbValue, generateColor } from "./helper";
 
 class BoxContainer extends Component {
   static defaultProps = { num: 18 };
@@ -18,9 +18,9 @@ class BoxContainer extends Component {
     let newColor;
     do {
       newColor = ` rgba(
-            ${rgbvalue()},
-            ${rgbvalue()},
-            ${rgbvalue()}
+            ${rgbValue()},
+            ${rgbValue()},
+            ${rgbValue()}
         )`;
     } while (newColor === c);
 
