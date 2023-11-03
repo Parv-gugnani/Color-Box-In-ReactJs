@@ -1,7 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Box = () => {
-  return <div>Box</div>;
-};
+class Box extends Component {
+  constructor(props) {
+    super(props);
+    this.handleChangeColor = this.handleChangeColor.bind(this);
+  }
+
+  handleChangeColor() {
+    this.props.changeColor(this.props.color);
+  }
+
+  render() {
+    return (
+      <div
+        onClick={this.handleChangeColor}
+        style={{
+          backgroundColor: this.props.color,
+          width: "13em",
+          height: "13em",
+        }}
+      />
+    );
+  }
+}
 
 export default Box;
